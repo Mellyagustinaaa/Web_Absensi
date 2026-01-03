@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Absensi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card" id="auth-card">
+    <h1>Absensi - Login / Daftar</h1>
+    <div id="auth-forms">
+      <div class="col">
+        <h2>Daftar</h2>
+        <input id="reg-email" placeholder="Email" type="email" />
+        <input id="reg-pass" placeholder="Password" type="password" />
+        <button id="btn-register">Daftar</button>
+      </div>
+
+      <div class="col">
+        <h2>Masuk</h2>
+        <input id="login-email" placeholder="Email" type="email" />
+        <input id="login-pass" placeholder="Password" type="password" />
+        <button id="btn-login">Masuk</button>
+      </div>
+    </div>
+    <p class="muted">Aplikasi ini menggunakan Firebase Authentication & Realtime Database</p>
+  </div>
+
+  <div class="card" id="app-card" style="display:none;">
+    <div class="header">
+      <div>
+        <strong id="display-email"></strong><br/>
+        <small id="display-uid"></small>
+      </div>
+      <div>
+        <button id="btn-signout" class="danger">Keluar</button>
+      </div>
+    </div>
+
+    <h2>Absensi</h2>
+    <div class="absen-row">
+      <select id="status">
+        <option value="">-- Pilih Status --</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
+        <option value="Sakit">Sakit</option>
+        <option value="Izin">Izin</option>
+      </select>
+      <button id="btn-absen">Absen Sekarang</button>
+    </div>
+
+    <h3>Riwayat Absensi</h3>
+    <ul id="history"></ul>
+
+    <hr />
+    <div id="admin-panel" style="display:none;">
+      <h3>Admin - Semua Absensi</h3>
+      <ul id="all-history"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+:root {
+  --bg: #f4f7fb;
+  --card: rgba(237, 116, 183, 0.25);
+  --accent: #d603ac;
+  --danger: #ee4343;
+  --muted: #8282829f;
+}
+
+/* RESET & DASAR */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Inter, system-ui, Arial;
+  background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+              url('img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fffefe;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  max-width: 700px;
+  min-height: 480px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(152, 46, 115, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  text-align: center;
+}
+
+/* JUDUL */
+h1 {
+  margin-bottom: 32px;
+  font-size: 28px;
+  color: #fff;
+}
+
+h2, h3 {
+  margin: 20px 0;
+  color: #fff;
+}
+
+/* FORM */
+#auth-forms {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 5px rgba(214, 3, 172, 0.4);
+}
+
+/* TOMBOL */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b60290;
+  transform: scale(1.03);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: #d63b3b;
+}
+
+/* ABSEN DAN LIST */
+.absen-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.absen-row select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+ul {
+  padding-left: 18px;
+  text-align: left;
+}
+
+li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 8px;
+}
